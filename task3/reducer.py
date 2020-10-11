@@ -84,3 +84,8 @@ for line in sys.stdin:
                 joins.left_val.append(val)
             elif val_len == joins.right_val_len:
                 joins.right_val.append(val)
+
+if joins.left_val and joins.right_val:
+    for i in range(len(joins.left_val)):
+        for j in range(len(joins.right_val)):
+            print_row(joins.key, joins.left_val[i], joins.right_val[j])
